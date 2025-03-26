@@ -1,6 +1,6 @@
 {
   "name": "accessible-design-systems-with-css-apis",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "scripts": {
     "clear:cache": "rm -rf .parcel-cache",
