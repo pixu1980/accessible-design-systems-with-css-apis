@@ -1,6 +1,4 @@
-# talk-template
-Talk Template
+# accessible-design-systems-with-css-apis
+Accessible Design Systems with CSS APIs
 
-Check the slides here
-
-[Talk Template](https://pixu1980.github.io/talk-template/)
+Check the slides [here](https://pixu1980.github.io/accessible-design-systems-with-css-apis)
