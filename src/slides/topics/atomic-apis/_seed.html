@@ -1,0 +1,30 @@
+<section>
+  <h3>
+    Let's <mark>"seed"</mark> a Design System <br />
+    with <mark>Atomic APIs</mark>
+  </h3>
+</section>
+<section>
+  <h4>the <mark>"seed"</mark></h4>
+  <pre>
+    <code class="hljs scss" data-trim data-line-numbers="|2|4-9|14-17">
+@layer design-system {
+  /* here goes the design system css code */
+
+  @layer reset {
+    * {
+      box-sizing: border-box;
+      ...
+    }
+  }
+
+  ...
+} 
+
+/* 
+here goes the application/project specific
+code and design system overrides
+*/
+    </code>
+  </pre>
+</section>

@@ -1,0 +1,101 @@
+<section>
+  <h2><mark>Protons</mark></h2>
+  <h3>Colors and Shadows</h3>
+</section>
+<section>
+  <blockquote>💡 Think of Protons as the <mark>personality traits</mark> particles.</blockquote>
+</section>
+<section>
+  <p>Protons define the <mark>visual essence of a design</mark> giving character, tone, elevation and layering. These choices <mark>impact the overall look</mark> of a digital product.</p>
+</section>
+<section>
+  <h4><mark>Protons</mark>: Colors and Shadows</h4>
+  <pre>
+      <code class="hljs scss" data-trim data-line-numbers="|5-7|11-20|22-26|28-31|33-36|38-41|49-58|60-63|65-69|73-78">
+@layer design-system {
+  ...
+
+  @layer protons {
+    :root {
+      /* here goes the protons common variables */    
+    }
+    
+    @layer colors {
+      :root {
+        /* neutral colors - same in light and dark modes */
+        --ds--c--n-100: hsl(248, 28%, 84%);
+        --ds--c--n-200: hsl(248, 28%, 78%);
+        --ds--c--n-300: hsl(248, 28%, 70%);
+        --ds--c--n-400: hsl(248, 28%, 58%);
+        --ds--c--n-500: hsl(248, 28%, 48%);
+        --ds--c--n-600: hsl(248, 70%, 30%);
+        --ds--c--n-700: hsl(248, 70%, 22%);
+        --ds--c--n-800: hsl(248, 70%, 14%);
+        --ds--c--n-900: hsl(248, 70%, 8%);
+      
+        /* blue */
+        --ds--c--b-100: light-dark(
+          hsl(245, 94%, 98%), 
+          hsl(245, 73%, 98%)
+        );
+        
+        --ds--c--b-200: light-dark(
+          hsl(245, 94%, 94%), 
+          hsl(245, 73%, 94%)
+        );
+        
+        --ds--c--b-300: light-dark(
+          hsl(245, 94%, 84%), 
+          hsl(245, 73%, 84%)
+        );
+        
+        --ds--c--b-400: light-dark(
+          hsl(245, 94%, 74%), 
+          hsl(245, 73%, 74%)
+        );
+        
+        ...
+      }
+    }
+
+    @layer elevations {
+      :root {
+        /* basic shadow colors */
+        --ds--e--shadow-color-1: light-dark(
+          var(--ds--c--n-100), 
+          var(--ds--c--n-500)
+        );
+        
+        --ds--e--shadow-color-2: light-dark(
+          var(--ds--c--n-500),
+          var(--ds--c--n-900)
+        );
+
+        /* xxs, usually for user input elements
+          (inputs, selects, textareas, ...) */
+        --ds--e--100: 
+          0 0 3px -1px var(--ds--e--shadow-color-1);
+
+        /* xs, usually for elements closest to the application 
+          background, for example cards */
+        --ds--elevation-200: 
+          0 0 5px 2px var(--ds--e--shadow-color-1),
+          0 0 5px -2px var(--ds--e--shadow-color-2);
+          
+        ...
+          
+        /* xl, usually for elements highest in the stacking order,
+          for example notifications and toasts,
+          which should be above all other content */
+        --ds--elevation-600: 
+          0 4px 24px -3px var(--ds--e--shadow-color-1),
+          0 18px 64px -8px var(--ds--e--shadow-color-2);
+      }
+    }
+
+    ...
+  } 
+}
+    </code>
+  </pre>
+</section>

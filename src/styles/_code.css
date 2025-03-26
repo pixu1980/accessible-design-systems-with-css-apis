@@ -11,13 +11,21 @@
     }
   }
 
+  .hljs.has-highlights tr:not(.highlight-line) {
+    opacity: 0.55;
+  }
+
   .hljs-ln-numbers {
     min-width: 2ch;
   }
-  
+
   .highlight-line {
     .hljs-comment {
       color: hsl(50, 45%, 60%);
     }
+  }
+
+  .hljs-ln td {
+    padding: 0 0 0 1rem !important;
   }
 }
