@@ -3,92 +3,41 @@
     <h2>Visual Integrity Testing</h2>
   </section>
   <section>
-    <h3>Visual Regression Testing</h3>
+    <h3>No-Regression Testing</h3>
     <ul>
-      <li>Automated screenshot capture of UI states</li>
-      <li>Detect unintended visual changes over time</li>
-      <li>Compare snapshot images pixel-by-pixel</li>
-      <li>Highlight visual differences between versions</li>
+      <li class="fragment">Automated <mark>snapshot compare</mark> of UI states, with pixel-by-pixel diffing</li>
+      <li class="fragment"><mark>Detect</mark> unintended <mark>visual changes</mark> over time</li>
+      <li class="fragment"><mark>Highlight visual differences</mark> between versions</li>
     </ul>
   </section>
   <section>
-    <h3>Tools</h3>
+    <h3>Tooling</h3>
     <ul>
-      <li>
-        <mark>Playwright</mark> <br />
+      <li class="fragment">
+        <mark>Playwright</mark>, or similar <br />
         End-to-end testing framework.
       </li>
-      <li>
-        <mark>Storybook + Chromatic</mark> <br />
-        Component testing with visual review.
+      <li class="fragment">
+        <mark>Storybook + Chromatic/Loki</mark> <br />
+        Component testing with visual review and no-regression testing
       </li>
-      <li>
-        <mark>Loki</mark> <br />
-        Visual regression for design systems.
-      </li>
-      <li>
+      <li class="fragment">
         <mark>Percy</mark> <br />
         Automated visual review platform.
       </li>
     </ul>
   </section>
-  <!-- <section>
-    <h3>Real Regression Example</h3>
-    <pre><code>
-// Example using Playwright and Percy for visual regression
-
-import { test } from '@playwright/test';
-import percySnapshot from '@percy/playwright';
-
-test('Theme regression test', async ({ page }) => {
-await page.goto('http://localhost:3000');
-
-// Simulate a theme modification (e.g., toggle to a modified theme)
-await page.click('.theme-toggle');
-
-// Capture a snapshot for visual comparison
-await percySnapshot(page, 'Modified Theme Snapshot');
-});
-    </code></pre>
-    <p>This test captures a snapshot after a theme change to detect any unintended visual differences.</p>
-  </section> -->
   <section>
-    <h2>Pattern and Strategy: Versioning, Override, & Maintenance</h2>
-  </section>
-  <section>
-    <h3>Token Versioning</h3>
-    <ul>
-      <li>Understand the impact of token changes.</li>
-      <li>Example: What happens when <code>--color-primary</code> changes?</li>
-      <li>Maintain consistency across updates and iterations.</li>
-    </ul>
-    <p>Versioning ensures controlled evolution of your design system.</p>
-  </section>
-  <section>
-    <h3>Managing External Overrides</h3>
-    <ul>
-      <li>Enable consumers to customize without breaking core styles.</li>
-      <li>Provide clear APIs and documented override points.</li>
-      <li>Facilitate seamless integration with third-party styles.</li>
-    </ul>
+    <h3>Documentation & Overrides</h3>
     <p>A well-planned override strategy improves flexibility and adoption.</p>
-  </section>
-  <section>
-    <h3>Documentation & Playground</h3>
     <ul>
-      <li>Maintain comprehensive documentation for your design tokens and components.</li>
+      <li>Allow consumers to customize <mark>without breaking core</mark> styles.</li>
+      <li><mark>Provide clear APIs</mark> and documented override points.</li>
       <li>Utilize tools such as <strong>Storybook</strong> or <strong>Zeroheight</strong> as a playground.</li>
       <li>Show live examples to illustrate token behavior and overrides.</li>
     </ul>
-    <p>Good documentation is the key to a successful, maintainable design system.</p>
   </section>
   <section>
-    <!-- <h3>Summary & Next Steps</h3>
-    <ul>
-      <li>Implement versioning to manage token changes.</li>
-      <li>Support external overrides with a clear API.</li>
-      <li>Document and showcase your system with interactive playgrounds.</li>
-    </ul> -->
     <p>Plan for maintenance from the start to ensure long-term scalability.</p>
   </section>
 </section>

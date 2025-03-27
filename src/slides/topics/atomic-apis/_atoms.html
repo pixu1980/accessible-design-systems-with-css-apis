@@ -12,12 +12,9 @@
   </p>
 </section>
 <section>
-  <h4>
-    <mark>Atoms</mark>: The Building Blocks <br />
-    (TODO: line-numbers)
-  </h4>
+  <h4><mark>Atoms</mark>: The Building Blocks</h4>
   <pre>
-      <code class="hljs scss" data-trim data-line-numbers="|">
+      <code class="hljs scss" data-trim data-line-numbers="|9-24|27-33">
 @layer design-system {
   ...
   
@@ -44,9 +41,13 @@
       }
     }
     
-    @layer input { /* input component variables and styles */ }
+    @layer input { 
+      /* input component variables and styles */
+    }
     
-    @layer select { /* select component variables and styles */ }
+    @layer select {
+      /* select component variables and styles */
+    }
 
     ...
   }

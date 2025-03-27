@@ -12,12 +12,9 @@
   </p>
 </section>
 <section>
-  <h4>
-    <mark>Molecules</mark>: Composed but Cohesive <br />
-    (TODO: line-numbers)
-  </h4>
+  <h4><mark>Molecules</mark>: Composed but Cohesive</h4>
   <pre>
-      <code class="hljs scss" data-trim data-line-numbers="|">
+      <code class="hljs scss" data-trim data-line-numbers="|9-18|20-30|33-39">
 @layer design-system {
   ...
 
@@ -50,9 +47,13 @@
       }
     }
 
-    @layer date-picker { /* date-picker component variables and styles */ }
+    @layer date-picker {
+      /* date-picker component variables and styles */
+    }
 
-    @layer dialog { /* dialog component variables and styles */ }
+    @layer dialog {
+      /* dialog component variables and styles */
+    }
   }
 
   ...
