@@ -49466,8 +49466,7 @@ const $ce2ab6a3784a12d8$var$slides = (0, $ef6d0cb1bf5eee6a$export$2e2bcd8739ae03
     // Flags if we should monitor the hash and change slides accordingly
     respondToHashChanges: true,
     // Push each slide change to the browser history.  Implies `hash: true`
-    history: true,
-    slideNumber: 'c/t'
+    history: true
 });
 // keyboard interaction configuration
 $ce2ab6a3784a12d8$var$slides.configure({
@@ -49480,4 +49479,4 @@ $ce2ab6a3784a12d8$var$slides.configure({
 $ce2ab6a3784a12d8$var$slides.initialize();
 
 
-//# sourceMappingURL=accessible-design-systems-with-css-apis.247e56d6.js.map
+//# sourceMappingURL=accessible-design-systems-with-css-apis.9bf60911.js.map
