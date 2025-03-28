@@ -2708,6 +2708,8 @@
     }
 
     & pre {
+      width: 95%;
+
       & code {
         font-size: .8em;
         line-height: 1.3;
@@ -3223,4 +3225,4 @@
     }
   }
 }
-/*# sourceMappingURL=accessible-design-systems-with-css-apis.06288860.css.map */
+/*# sourceMappingURL=accessible-design-systems-with-css-apis.cef42634.css.map */

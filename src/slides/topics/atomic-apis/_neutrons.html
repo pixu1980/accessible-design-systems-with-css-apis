@@ -113,7 +113,7 @@
         }
 
         @layer sizes {
-          :where(col, [col]) {
+          [col] {
             &[size~="1"] {
               grid-column-end: span 1;
             }
@@ -130,7 +130,7 @@
           }
         
           @media screen and (width >= 414px) {
-            :where(col, [col]) {
+            [col] {
               &[size~="xs-1"] {
                 grid-column-end: span 1;
               }
@@ -146,7 +146,7 @@
           ...
         
           @media screen and (width >= 1920px) {
-            :where(col, [col]) {
+            [col] {
               &[size~="xxl-1"] {
                 grid-column-end: span 1;
               }
@@ -155,54 +155,6 @@
         
               &[size~="xxl-12"] {
                 grid-column-end: span 12;
-              }
-            }
-          }
-        }
-        
-        @layer offsets {
-          :where(col, [col]) {
-            &[offset~="1"] {
-              grid-column-start: 2;
-            }
-        
-            &[offset~="2"] {
-              grid-column-start: 3;
-            }
-        
-            ...
-        
-            &[offset~="11"] {
-              grid-column-start: 12;
-            }
-          }
-        
-          @media screen and (width >= 414px) {
-            :where(col, [col]) {
-              &[offset~="xs-1"] {
-                grid-column-start: 2;
-              }
-        
-              ...
-        
-              &[offset~="xs-12"] {
-                grid-column-start: 13;
-              }
-            }
-          }
-          
-          ...
-        
-          @media screen and (width >= 1920px) {
-            :where(col, [col]) {
-              &[offset~="xxl-1"] {
-                grid-column-start: 2;
-              }
-        
-              ...
-        
-              &[offset~="xxl-12"] {
-                grid-column-start: 13;
               }
             }
           }

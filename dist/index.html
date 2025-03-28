@@ -5,7 +5,7 @@
     <title>Accessible Design Systems with CSS Atomic APIs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="accessible-design-systems-with-css-apis.06288860.css">
+    <link rel="stylesheet" href="accessible-design-systems-with-css-apis.cef42634.css">
   </head>
   <body>
     <div class="reveal">
@@ -113,43 +113,10 @@
     </h3>
   </section>
   <section>
-    <h2>
+    <h3>
       Why do we need an <br>
       <mark>Accessible</mark> Design System?
-    </h2>
-  </section>
-  <section>
-    <h3><mark>Key</mark> Benefits</h3>
-    <ul>
-      <li class="fragment">
-        <mark>Consistency</mark> <br>
-        <span>Coherent look and feel across all products</span>
-      </li>
-      <li class="fragment">
-        <mark>Scalability</mark> <br>
-        <span>Adaptive components as the product grows</span>
-      </li>
-      <li class="fragment">
-        <mark>Efficiency</mark> <br>
-        <span>Streamlines design and dev workflows</span>
-      </li>
-      <li class="fragment">
-        <mark>Accessibility</mark> <br>
-        <span>Inclusive design practices at its core</span>
-      </li>
-    </ul>
-  </section>
-  <section>
-    <h3>Strategic <mark>Impacts</mark></h3>
-    <ul>
-      <li class="fragment">Empowers <mark>brand identity</mark></li>
-      <li class="fragment"><mark>Reduces</mark> design and technical debts</li>
-      <li class="fragment">Accelerates <mark>time-to-market</mark></li>
-      <li class="fragment"><mark>Drives</mark> quality and innovation</li>
-    </ul>
-  </section>
-  <section>
-    <h3>Systemic <mark>Accessibility</mark></h3>
+    </h3>
     <ul>
       <li class="fragment">Color <mark>contrasts</mark> and <mark>guidelines</mark> for visibility</li>
       <li class="fragment">Spacing and grid systems for <mark>clear structure</mark></li>
@@ -671,22 +638,6 @@ root.style.removeProperty('--text-color');
 
 <section>
   <section>
-    <h3>
-      <mark>Extending</mark> and <mark>breaking down</mark> <br>
-      Atomic Design (<a href="https://atomicdesign.bradfrost.com" target="_blank" rel="noopener noreferrer">by Brad Frost</a>)
-    </h3>
-    <p>Its <mark>principles</mark> takes cues from the chemistry itself</p>
-  </section>
-  <section>
-    <figure>
-      <figcaption>A picture is worth a thousand words</figcaption>
-      <picture>
-        <source srcset="atomic-design-process.745172d6.webp" type="image/webp">
-        <img src="atomic-design-process.0034486a.jpg" alt="Image showing the Atomic Design process (from atoms, to molecules, to organisms, to templates, to pages)">
-      </picture>
-    </figure>
-  </section>
-  <section>
   <h3>
     Let's <mark>"seed"</mark> a Design System <br>
     with <mark>Atomic APIs</mark>
@@ -754,6 +705,22 @@ code and design system overrides
   </pre>
 </section>
 
+  <section>
+    <h3>
+      <mark>Extending</mark> and <mark>breaking down</mark> <br>
+      Atomic Design (<a href="https://atomicdesign.bradfrost.com" target="_blank" rel="noopener noreferrer">by Brad Frost</a>)
+    </h3>
+    <p>Its <mark>principles</mark> takes cues from the chemistry itself</p>
+  </section>
+  <section>
+    <figure>
+      <figcaption>A picture is worth a thousand words</figcaption>
+      <picture>
+        <source srcset="atomic-design-process.745172d6.webp" type="image/webp">
+        <img src="atomic-design-process.0034486a.jpg" alt="Image showing the Atomic Design process (from atoms, to molecules, to organisms, to templates, to pages)">
+      </picture>
+    </figure>
+  </section>
   <section>
     <h3><mark>Un-packing</mark> Atoms</h3>
   </section>
@@ -872,7 +839,7 @@ code and design system overrides
         }
 
         @layer sizes {
-          :where(col, [col]) {
+          [col] {
             &[size~="1"] {
               grid-column-end: span 1;
             }
@@ -889,7 +856,7 @@ code and design system overrides
           }
         
           @media screen and (width >= 414px) {
-            :where(col, [col]) {
+            [col] {
               &[size~="xs-1"] {
                 grid-column-end: span 1;
               }
@@ -905,7 +872,7 @@ code and design system overrides
           ...
         
           @media screen and (width >= 1920px) {
-            :where(col, [col]) {
+            [col] {
               &[size~="xxl-1"] {
                 grid-column-end: span 1;
               }
@@ -914,54 +881,6 @@ code and design system overrides
         
               &[size~="xxl-12"] {
                 grid-column-end: span 12;
-              }
-            }
-          }
-        }
-        
-        @layer offsets {
-          :where(col, [col]) {
-            &[offset~="1"] {
-              grid-column-start: 2;
-            }
-        
-            &[offset~="2"] {
-              grid-column-start: 3;
-            }
-        
-            ...
-        
-            &[offset~="11"] {
-              grid-column-start: 12;
-            }
-          }
-        
-          @media screen and (width >= 414px) {
-            :where(col, [col]) {
-              &[offset~="xs-1"] {
-                grid-column-start: 2;
-              }
-        
-              ...
-        
-              &[offset~="xs-12"] {
-                grid-column-start: 13;
-              }
-            }
-          }
-          
-          ...
-        
-          @media screen and (width >= 1920px) {
-            :where(col, [col]) {
-              &[offset~="xxl-1"] {
-                grid-column-start: 2;
-              }
-        
-              ...
-        
-              &[offset~="xxl-12"] {
-                grid-column-start: 13;
               }
             }
           }
@@ -984,10 +903,10 @@ code and design system overrides
   <blockquote>💡 Think of Electrons as the <mark>expressive traits</mark> particles</blockquote>
 </section>
 <section>
-  <p balance="">
-    Active and essential, <mark>representing the expressive part</mark> of the design system, <mark>communicating content and meaning</mark>. <br><br>
-    Fonts, weights, sizes, and icons work dynamically within layouts, often <mark>adapting across contexts</mark>.
-  </p>
+  <p balance="">Active and essential, <mark>representing the expressive part</mark> of the design system, <mark>communicating content and meaning</mark></p>
+</section>
+<section>
+  <p balance="">Fonts, weights, sizes, and icons work dynamically within layouts, often <mark>adapting across contexts</mark></p>
 </section>
 <section>
   <h4><mark>Electrons</mark>: Typography and Iconography</h4>
@@ -1006,7 +925,7 @@ code and design system overrides
         --ds--t--ratio: 1.125; /* major second */
         --ds--t--font-size--base: 1.6rem;
         
-        --ds--t--line-height--base: 1.3;
+        --ds--t--line-height--base: 1.5;
       
         --ds--t--font-weight: 400;
         --ds--t--font-style: normal;
@@ -1233,7 +1152,7 @@ code and design system overrides
         --ds--f--radius: var(--ds--r--xxs);
       }
       
-      :focus {
+      :focus-visible {
         outline: var(--ds--f--size) var(--ds--f--style) var(--ds--f--color);
         outline-offset: var(--ds--f--offset);
         border-radius: var(--ds--f--radius);
@@ -1308,10 +1227,10 @@ code and design system overrides
   <blockquote>💡 Think of Atoms as the <mark>smallest working unit</mark> defining their <mark>role</mark>, <mark>function</mark> and <mark>appearance</mark>.</blockquote>
 </section>
 <section>
-  <p>
-    Each atom represents a <mark>foundational standalone component</mark>, for example: a button, an input field or a label. Carrying <mark>unique properties and behaviors</mark>. <br>
-    <br>And most importantly <mark>they can't be broken down</mark> without losing meaning or purpose.
-  </p>
+  <p>Each atom represents a <mark>foundational standalone component</mark>, for example: a button, an input field or a label. Carrying <mark>unique properties and behaviors</mark>.</p>
+</section>
+<section>
+  <p>And most importantly <mark>they can't be broken down</mark> without losing meaning or purpose.</p>
 </section>
 <section>
   <h4><mark>Atoms</mark>: The Building Blocks</h4>
@@ -1607,10 +1526,10 @@ code and design system overrides
   <section>
     <h3>Documentation & <mark>Overrides</mark></h3>
     <ul>
-      <li class="fragment">Allow consumers to customize <mark>without breaking core</mark> styles</li>
-      <li class="fragment"><mark>Provide clear APIs</mark> and documented override points</li>
-      <li class="fragment">Utilize tools such as <mark>Storybook</mark> or <mark>Zeroheight</mark> as a playground</li>
-      <li class="fragment">Show live examples to <mark>illustrate token behaviors</mark> and overrides.</li>
+      <li class="fragment">Allow <mark>customization</mark></li>
+      <li class="fragment">Provide <mark>clear APIs</mark></li>
+      <li class="fragment">Playgrounds with <mark>Storybook</mark> or <mark>Zeroheight</mark></li>
+      <li class="fragment">Show <mark>live examples</mark> in the documentation</li>
     </ul>
   </section>
 </section>
@@ -1636,17 +1555,19 @@ code and design system overrides
   <section>
     <h3>Cons</h3>
     <ul>
-      <li class="fragment"><mark>Learning/Practice curve</mark> for Custom Properties and Layers</li>
-      <li class="fragment">Increased <mark>effort in documentation and maintenance</mark></li>
-      <li class="fragment">Requirement for <mark>dedicated visual regression testing</mark> processes</li>
+      <li class="fragment"><mark>Learning curve</mark> for Custom Properties and Layers</li>
+      <li class="fragment"><mark>Effort</mark> for documentation maintenance</li>
+      <li class="fragment">Effort for implementing testing <mark>processes</mark></li>
     </ul>
   </section>
   <section>
     <h3>Final Thoughts</h3>
-    <p>
-      An accessible and <mark>well-structured</mark> design system offers numerous benefits in terms of <mark>consistency and scalability</mark>. However, it requires ongoing effort in management,
-      documentation, and testing to <mark>maintain quality and visual integrity</mark>.
-    </p>
+  </section>
+  <section>
+    <p balance="">An accessible and <mark>well-structured</mark> design system offers numerous benefits in terms of <mark>consistency and scalability</mark></p>
+  </section>
+  <section>
+    <p>However, it requires ongoing effort in management, documentation, and testing to <mark>maintain quality and visual integrity</mark>.</p>
   </section>
 </section>
 
