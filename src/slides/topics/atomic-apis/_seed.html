@@ -7,7 +7,7 @@
 <section>
   <h4>the <mark>"seed"</mark></h4>
   <pre>
-    <code class="hljs scss" data-trim data-line-numbers="|2|4-9|14-17">
+    <code class="hljs scss" data-trim data-line-numbers="|4-9|11-18|20-31|33-45">
 @layer design-system {
   /* here goes the design system css code */
 
@@ -15,6 +15,43 @@
     * {
       box-sizing: border-box;
       ...
+    }
+  }
+  
+  @layer motion {
+    :root {
+      --ds--m--animation-speed: .25s;
+      --ds--m--animation-speed--reduce: .15s;
+      
+      --ds--m--animation-easing: ease-in-out;
+      --ds--m--animation-easing-reduce: linear;
+    }
+    
+    /* Default animation */
+    @keyframes myAwesomeAnimation {
+      0% { transform: translateX(0); opacity: 0; }
+      50% { transform: translateX(100px); opacity: 0.5; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+    
+    .element {
+      animation-name: myAwesomeAnimation;
+      animation-duration: var(--ds--m--animation-speed);
+      animation-timing-function: var(--ds--m--animation-easing);
+    }
+    
+    /* Simpler animation for reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      @keyframes myAwesomeAnimation {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+  
+      .element {
+        animation-name: myAwesomeAnimation;
+        animation-duration: var(--ds--m--animation-speed--reduce);
+        animation-timing-function: var(--ds--m--animation-easing--reduce);
+      }
     }
   }
 
