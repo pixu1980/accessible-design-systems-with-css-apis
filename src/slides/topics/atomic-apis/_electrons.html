@@ -37,8 +37,13 @@
       }
       
       html {
-        /* allows to use rems as a simple division by 10 */
-        font-size: 10px;
+        /* 
+          16px/10px = 0.625, expressed in em
+          makes the font-size reactive to browser settings
+          and makes 1rem = 10px,
+          allowing to use rems as a simple division base-10 value
+        */
+        font-size: 0.625em;
       }
       
       body {
