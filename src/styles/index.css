@@ -1,9 +1,9 @@
 @import 'npm:@pixu-talks/fonts';
 @import 'npm:@pixu-talks/theme';
 
-@import './_cascade.css' layer(pixu-talk);
+@import './_cascade.css' layer(pixu-talks);
 
-@layer pixu-talk {
+@layer pixu-talks {
   @layer reveal {
     figcaption + picture {
       margin-block-start: 3rem;
