@@ -3,7 +3,7 @@
 
 @import './_cascade.css' layer(pixu-talks);
 
-@layer pixu-talks {
+@layer speaker-talks {
   @layer reveal {
     figcaption + picture {
       margin-block-start: 3rem;
